@@ -1,2 +1,1 @@
 # FoodieFlow-DB
-DB postgres
