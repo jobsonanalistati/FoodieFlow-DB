@@ -4,7 +4,6 @@ resource "aws_db_instance" "FoodieFlowRds" {
   engine_version       = "13.10"
   instance_class       = "db.t2.micro"
   identifier           = "rds-${var.projectName}"
-  mult_az              = false
   db_name              = var.POSTGRES_DB
   username             = var.POSTGRES_USER
   password             = var.POSTGRES_PASSWORD
