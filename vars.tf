@@ -3,7 +3,7 @@ variable "regiaoDefault" {
   description = "aws region"
 }
 
-variable "projectName {
+variable "projectName" {
   default     = "foodieflow"
   description = "project name"
 }
