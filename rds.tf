@@ -1,7 +1,7 @@
 resource "aws_db_instance" "FoodieFlowRds" {
   allocated_storage    = 10
   engine               = "postgres"
-  engine_version       = "13.10"
+  engine_version       = "16.1"
   instance_class       = "db.t2.micro"
   identifier           = "rds-${var.projectName}"
   db_name              = var.POSTGRES_DB
