@@ -21,5 +21,5 @@ variable "POSTGRES_PASSWORD" {
 
 variable "POSTGRES_DB" {
   description = "The PostgreSQL database"
-  sensitive = true
+  sensitive   = true
 }
