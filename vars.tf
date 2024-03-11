@@ -16,7 +16,6 @@ variable "POSTGRES_USER" {
 
 variable "POSTGRES_PASSWORD" {
   description = "The PostgreSQL password"
-  #default     = "postgres"
   sensitive   = true
 }
 
