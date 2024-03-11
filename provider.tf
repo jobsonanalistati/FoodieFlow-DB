@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-foodieflow"
-    key = rds/terraform.tfstate 
-    region ="us-east-2"
+    bucket = "terraform-foodieflow-db"
+    key = "rds/terraform.tfstate" 
+    region ="us-east-1"
   }
 }
 
