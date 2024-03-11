@@ -22,5 +22,5 @@ variable "POSTGRES_PASSWORD" {
 variable "POSTGRES_DB" {
   description = "The PostgreSQL database"
   #default     = "FIAP"
-  sensitive   = true
+  sensitive = true
 }
