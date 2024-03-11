@@ -14,7 +14,7 @@ module "vpc" {
 }
 
 resource "aws_db_subnet_group" "FoodieFlowVPC" {
-  name       = "VPC-SUB-${var.projectName}"
+  name       = "vpc-sub-${var.projectName}"
   subnet_ids = module.vpc.public_subnets
 
   tags = {
