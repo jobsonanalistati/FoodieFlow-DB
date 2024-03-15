@@ -10,7 +10,7 @@ resource "aws_db_instance" "FoodieFlowRds" {
   skip_final_snapshot  = true
   db_subnet_group_name = aws_db_subnet_group.FoodieFlowVPC.name
   parameter_group_name = aws_db_parameter_group.FoodieFlowDBParameters.name
-
+  publicly_accessible  = true
   tags = {
     Project     = var.projectName
     Terraform   = "true"
