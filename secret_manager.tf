@@ -4,10 +4,10 @@ resource "aws_secretsmanager_secret" "foodieFlow_secret" {
 
 resource "aws_secretsmanager_secret_version" "foodieFlow_secret" {
   secret_id = aws_secretsmanager_secret.foodieFlow_secret.id
-  secret_string = jsonencode({
+  secret_string = jsonencode(merge(try(jsondecode(data.aws_secretsmanager_secret_version.foodieFlow_secret.secret_string), {}), {
     host     = aws_db_instance.FoodieFlowRds.address,
     db_name  = var.POSTGRES_DB,
     username = var.POSTGRES_USER,
     password = var.POSTGRES_PASSWORD
-  })
+  }))
 }
