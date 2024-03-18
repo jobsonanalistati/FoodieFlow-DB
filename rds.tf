@@ -8,7 +8,7 @@ resource "aws_db_instance" "FoodieFlowRds" {
   username             = var.POSTGRES_USER
   password             = var.POSTGRES_PASSWORD
   skip_final_snapshot  = true
-  db_subnet_group_name = aws_db_subnet_group.FoodieFlowVPC.name
+  db_subnet_group_name = "VPC-${var.projectName}"
   parameter_group_name = aws_db_parameter_group.FoodieFlowDBParameters.name
   publicly_accessible  = true
   tags = {
