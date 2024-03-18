@@ -9,7 +9,7 @@ variable "projectName" {
 }
 
 variable "POSTGRES_USER" {
-  #default     = "postgres"
+  #default     = "postgres" 
   description = "The PostgreSQL user"
   sensitive   = true
 }
