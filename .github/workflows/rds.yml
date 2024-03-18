@@ -13,6 +13,8 @@ on:
     paths:
       - '**.tf'
 
+  workflow_dispatch:      
+
 jobs:
   terraform:
     name: 'Terraform'
