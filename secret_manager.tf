@@ -1,9 +1,9 @@
-resource "aws_secretsmanager_secret" "foodieFlow_secrets" {
-  name = "foodieFlow_secrets"
+resource "aws_secretsmanager_secret" "foodieFlow" {
+  name = "foodieFlow"
 }
 
-resource "aws_secretsmanager_secret_version" "foodieFlow_secrets" {
-  secret_id = aws_secretsmanager_secret.foodieFlow_secrets.id
+resource "aws_secretsmanager_secret_version" "foodieFlow" {
+  secret_id = aws_secretsmanager_secret.foodieFlow.id
   secret_string = jsonencode({
     host     = aws_db_instance.FoodieFlowRds.address,
     db_name  = var.POSTGRES_DB,
