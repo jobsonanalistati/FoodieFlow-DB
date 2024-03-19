@@ -1,5 +1,5 @@
-resource "aws_db_parameter_group" "FoodieFlowDBParameters" {
-  name   = "parameterdb-${var.projectName}"
+resource "aws_db_parameter_group" "FoodieFlowDBParameters-app" {
+  name   = "parameterdb-${var.projectName}-app"
   family = "postgres16"
 
   parameter {
