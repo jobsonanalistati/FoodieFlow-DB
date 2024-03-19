@@ -24,7 +24,7 @@ resource "aws_db_subnet_group" "FoodieFlowVPC-rds" {
 
 resource "aws_security_group" "rds-aws-security-group" {
   name        = "rds-production-security-group"
-  description = "Grupo de segurança para o RDS em produção"
+  description = "Grupo de seguranca para o RDS em producao"
 
   vpc_id = module.vpc.vpc_id # Usando o ID da VPC do módulo
 
