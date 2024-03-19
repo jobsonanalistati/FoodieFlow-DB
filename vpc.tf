@@ -28,7 +28,7 @@ resource "aws_security_group" "rds-aws-security-group" {
 
   vpc_id = module.vpc.vpc_id # Usando o ID da VPC do módulo
 
-  // Regra de entrada para IPv6 permitindo todos os TCPs de qualquer lugar
+  // Regra de entrada para IPv6 permitindo todos os TCPs de qualquer lugar 
   ingress {
     description      = "Allow IPv6 TCP traffic from anywhere"
     from_port        = 0
