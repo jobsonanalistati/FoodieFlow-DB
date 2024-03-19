@@ -21,9 +21,6 @@ resource "aws_db_subnet_group" "FoodieFlowVPC-rds" {
     Name = "FoodieFlowVPC-rds"
   }
 }
-data "aws_availability_zones" "available" {
-}
-
 
 resource "aws_security_group" "rds-aws-security-group" {
   name        = "rds-production-security-group"
