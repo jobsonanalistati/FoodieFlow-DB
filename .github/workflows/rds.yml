@@ -31,6 +31,9 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
+    - name: Clear AWS Credentials Cache
+      run: sudo rm -rf ~/.aws/cli/cache
+
     - name: Terraform Init
       id: init
       run: terraform init
