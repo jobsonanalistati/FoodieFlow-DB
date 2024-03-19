@@ -26,14 +26,14 @@ resource "aws_security_group" "rds-aws-security-group" {
   name        = "rds-production-security-group"
   description = "Grupo de segurança para o RDS em produção"
 
-  vpc_id = module.vpc.vpc_id  # Usando o ID da VPC do módulo
+  vpc_id = module.vpc.vpc_id # Usando o ID da VPC do módulo
 
-  // Regra de entrada para IPv6 permitindo todos os TCPs de qualquer lugar
+  // Regra de entrada para IPv6 permitindo todos os TCPs de qualquer lugar  
   ingress {
-    description = "Permitir tráfego IPv6 TCP de qualquer lugar"
-    from_port   = 0
-    to_port     = 65535
-    protocol    = "tcp"
+    description      = "Permitir tráfego IPv6 TCP de qualquer lugar"
+    from_port        = 0
+    to_port          = 65535
+    protocol         = "tcp"
     ipv6_cidr_blocks = ["::/0"]
   }
 
